@@ -16,13 +16,13 @@ const Navbar = () => {
            </Section>
            <Section>
              {
-              navbar.map(({title, path, id})=> {
-                return <Link className={({isActive}) => isActive && 'active'} key={id} to={path}>{title}</Link>
+              navbar.map(({title, path, id, hidden})=> {
+                return !hidden && <Link className={({isActive}) => isActive && 'active'} key={id} to={path}>{title}</Link>
               })
              }
            </Section>
            <Section>
-             <Button type='dark'>Sign In</Button>
+             <Button onClick={()=> navigate('/signin')} type='dark'>Sign In</Button>
            </Section>
         </Wrapper>
       </Main>

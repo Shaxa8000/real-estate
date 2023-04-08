@@ -27,21 +27,19 @@ const getType = ({type}) => {
     }
 }
 
-const Container = styled.button`
+const Container = styled.input`
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 2px;
 min-width: 120px;
 cursor: pointer;
+outline: none;
+border: 1px solid #E6E9EC;
 font-size: ${({fontSize}) => fontSize ? `${fontSize}px` : '14px'};
 height: ${({height}) => height ? `${height}px` : '44px'};
-width: ${({width}) => width ? `${width}px` : '130px'};
-${getType};
-
-:active {
-    opacity: 0.7
-}
+width: ${({width}) => width ? `${width}px` : '100%'};
+/* ${getType}; */
 `;
 
 export{Container};

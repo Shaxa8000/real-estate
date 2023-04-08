@@ -1,11 +1,27 @@
 import React from 'react';
 import {Container} from './style';
 
-const Input = ({children, type}) => {
+const Input = ({
+   onChange,
+   type,
+   placeholder,
+   name,
+   value,
+   defaultValue,
+   width,
+   height
+  }) => {
   return (
-    <Container type={type}>
-        {children || 'Generic button'}
-    </Container>
+    <Container
+    onChange={onChange}
+    type={type}
+    value={value}
+    defaultValue={defaultValue}
+    placeholder={placeholder}
+    name={name}
+    width={width}
+    height={height}
+   />
   )
 }
 
