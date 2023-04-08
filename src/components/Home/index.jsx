@@ -3,7 +3,9 @@ import {Container} from './style';
 
 const Home = () => {
   return (
-    <Container>Home</Container>
+    <Container>
+      <h1>Home</h1>
+    </Container>
   )
 }
 
